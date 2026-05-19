@@ -5,18 +5,6 @@ import static java.lang.foreign.ValueLayout.*;
 import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 
-// public class WalProtocol {
-//     // Usamos los Layouts de Panama para definir el tamaño real en bytes
-//     public static final long SEQ_SIZE     = ValueLayout.JAVA_LONG_UNALIGNED.byteSize(); // 8
-//     public static final long MAGIC_SIZE   = ValueLayout.JAVA_INT_UNALIGNED.byteSize();  // 4
-//     public static final long LENGTH_SIZE  = ValueLayout.JAVA_INT_UNALIGNED.byteSize();  // 4
-//     public static final long CRC_SIZE     = ValueLayout.JAVA_INT_UNALIGNED.byteSize();  // 4
-//     // La "Cabecera" fija antes del mensaje
-//     public static final long HEADER_SIZE = SEQ_SIZE + MAGIC_SIZE + LENGTH_SIZE; // 16
-//     // Offsets relativos dentro de cada registro
-//     public static final long MAGIC_OFFSET = SEQ_SIZE;
-//     public static final long LEN_OFFSET   = SEQ_SIZE + MAGIC_SIZE;
-// }
 public class WalProtocol {
 
     private static final String MAGIC_NUMBER_KEY = "magicNumber";

@@ -12,21 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.zip.CRC32C;
 
-/**
- * Hilo A llega con un mensaje de 10 bytes.
- *
- *  *Calcula que necesita 32 bytes (incluyendo header, crc y padding).
- *
- *  *Llama a getAndAdd. El tail global pasa de 0 a 32.
- *
- *  *Para el Hilo A, myOffset es 0.
- *
- *  *Hilo B llega con otro mensaje mientras el Hilo A todavía está escribiendo.
- *
- *  *Llama a getAndAdd. El tail global pasa de 32 a 64.
- *
- *  *Para el Hilo B, myOffset es 32.
- */
 public class WalManager implements AutoCloseable {
 
     private final MemorySegment segment;
